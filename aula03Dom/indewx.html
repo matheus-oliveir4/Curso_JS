@@ -6,30 +6,80 @@
     <title>Document</title>
 </head>
 <style>
-    body{
+    body{ 
         background-color: rgb(106, 64, 146);
+        position: relative;
     }
-    div#msg{
-        background-color: aqua;
+    section#n1{
+        text-align: center;
+        position: relative;
+        background-color: rgba(165, 42, 42, 0.404);
+        width: 400px;
+        height: 600px;
+        top: 50%;
+        left: 50%;
+        translate: -50%;
+    }
+    section#n1 > div#area{
+       
+        background-color: rgb(255, 102, 0);
         width: 200px;
         height: 100px;
         text-align: center;
         line-height: 100px;
         border: solid black;
         box-shadow: 1.2px 1.5px;
+        position: relative;
+        left: 24%;
     }
-    div#msg:hover{
+    div#area:hover{
         background-color: green;
         
     }
 
 </style>
 <body>
+    <section id="n1">
     <h1>Iniciando com Dom</h1>
     <p><h2>Aqui vai o resultado</h2></p>
     <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
-    <div id="msg">Clique aqui</div>
+    <!-- Forma de relizar eventos de funções atraves do HTML
+        " onclick="clicar()" ondblclick="clicoudenovo()" 
+        onmouseenter="entrar()" onmouseout="sair()">Clique aqui</div>-->
+        <div id="area"> Clique aqui </div>
+        <section id="n2">
+            <h1>Soamndo numeros</h1>
+            <input type="number" name="textn1" id="textn1">
+            <input type="number" name="textn1" id="textn1">
+            <input type="button" value="Somar" onclick="somar()">
+
+        </section>
+    </section>
     <script>
+
+
+        /*Forma de realizar eventos com funções atraves do JS sem o HTML*/
+        var a = window.document.querySelector("div#area")
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+        a.addEventListener('dblclick', clicoudenovo)
+        
+        function clicar(){
+           
+            a.innerText = "Clicou"
+        }
+        function sair(){
+            a.innerText = 'Saiu'
+        }
+        function  entrar(){
+            a.innerText = 'Entrou'
+        }
+        function clicoudenovo(){
+            a.innerText = 'Clicou de novo'
+        }
+
+        
     </script>
 
 </body>
