@@ -3,17 +3,20 @@ function contar(){
     var fim = document.getElementById('txtfim')
     var passo = document.getElementById('txtpasso')
 
-    /*var pass = Number(passo.value)
-    var res = document.querySelector('input#cont')*/
+    var res = document.querySelector('div#cont')
     
     if(inicio.value.length == 0 || fim.value.length == 0 || 
         passo.value.length == 0 ){
             window.alert("[ERRO] Dados ausentes")
         } else{
-            alert("Tudo OK")
-        }
-   /* for(c = Number(inicio.value); c <= Number(fim.value);c = c+pass ){
+            res.innerHTML = 'Contando.. '
+            let i = Number(inicio.value)
+            let f = Number(fim.value)
+            let p = Number(passo.value)
+            for(var c = i; c <= f;c += p ){
         
-        res.innerHTML = `${c}`
-    }*/
+                res.innerHTML += ` ${c} \u{1F448}`
+            }
+        }
+   
 }
