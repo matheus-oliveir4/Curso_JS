@@ -10,4 +10,4 @@ function calcular(){
     item.text += `${c} x ${a} = ${soma}`
     tab.appendChild(item)
     /*res.innerHTML += `${c} x ${a} = ${soma} <br>`*/ 
-}}
+}} 
